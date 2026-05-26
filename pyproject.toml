@@ -1,0 +1,22 @@
+[project]
+name = "image_eq_extension"
+version = "0.1.0"
+description = "Lightweight image contrast normalization for INCAR visuomotor policies"
+authors = [
+    { name = "Michael C. Welle", email = "michael.welle@incar-robotics.se" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "opencv-python",
+    "torch",
+    "av",
+    "tqdm",
+]
+
+[tool.setuptools]
+packages = ["image_eq_extension"]
+
+[project.entry-points.'incar_extensions.processing']
+image_eq = 'image_eq_extension'
